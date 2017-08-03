@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#img-div{
+    float: left;
+    margin-top: 10px;
+}
+#head{
+    width: 100%;
+    height: 100px;
+    background-color: #e96c1f;
+}
+#head-div{
+    height: 100%;
+    background-color: #e96c1f;
+}
+.content-div{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.head-role1{
+    float: left;
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 23px;
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: 10px;
+    font-family: 宋体;
+}
+.head-active{
+    font-weight: bold;
+}
+.head-role1:hover{
+    text-decoration: none;
+    color: white;
+    border-bottom: solid 2px #3385ff;
+}
+#body{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.information-head{
+    margin-top: 70px;
+}
+.information-head1{
+    margin-top: 40px;
+}
+.information-head-i{
+    margin-top: 5px;
+    float: left;
+    margin-right: 5px;
+}
+.information-head i{
+    color: black;
+    font-size: 18px;
+
+}
+.information-head-span{
+    color: gray;
+    font-size: 25px;
+    float: left;
+}
+.information-head-div{
+    padding-top: 12px;
+    border-bottom: dashed 2px #D8D8D8;
+    margin-left: 130px;
+}
+button{
+    display: block;
+    margin-top: 20px;
+    width: 140px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #ff8c14;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    cursor: pointer;
+    margin-left: 120px;
+    margin-bottom: 60px;
+    float: left;
+    margin-right: 10px;
+}
+.form-horizontal{
+    padding-top: 10px;
+}
+.form-horizontal .form-group{
+    margin-top: 25px;
+}
+.alert{
+    padding:5px;
+    margin-bottom: 0px;
+
+}
+#alert2{
+   margin-top: 23px;
+    display: none;
+}
+#alert1{
+    display: none;
+}
+.radio{
+    float: left;
+    margin-right: 10px;
+}
+.radio:first-child{
+    margin-left: 15px;
+}
+@media all and (max-width: 700px){
+    .content-div{
+        width: 700px;
+    }
+}

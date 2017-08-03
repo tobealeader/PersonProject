@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height ,user-scalable=no,initial-scale=1,minimum-scale=1, maximum-scale=1">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+<input type="file" name="file" id="file" accept="image/gif,image/jpeg,image/jpg,image/png" onchange="fileChange(event)">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 800px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">简历信息</h4>
+            </div>
+            <div class="modal-body" style="height: 480px">
+                <div class="form-group" class="first-modal-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Uposition" class="col-sm-3 control-label">职位</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Uposition" placeholder="请输入职位" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Uname" class="col-sm-3 control-label">姓名</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Uname" placeholder="请输入姓名" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Usex" class="col-sm-3 control-label">性别</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Usex" placeholder="请输入性别" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Ubirth" class="col-sm-3 control-label">出生年份</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Ubirth" placeholder="请输入出生年份" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Utell" class="col-sm-3 control-label">手机号码</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Utell" placeholder="请输入手机号码" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Uemail" class="col-sm-3 control-label">电子邮件</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Uemail" placeholder="请输入电子邮件" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Uaddress" class="col-sm-3 control-label">家庭住址</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Uaddress" placeholder="请输入家庭住址" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Umajor" class="col-sm-3 control-label">专业</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Umajor" placeholder="请输入专业" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Ueducation" class="col-sm-3 control-label">学历</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Ueducation" placeholder="请输入学历" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Uenglish" class="col-sm-3 control-label">英语水平</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Uenglish" placeholder="请输入英语水平" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Uuniversity" class="col-sm-3 control-label">毕业院校</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Uuniversity" placeholder="请输入毕业院校" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <label for="Uproject">工作经验</label>
+                            <textarea class="form-control" rows="6" id="Uproject" readonly="readonly"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="resume-accept">同意</button>
+                <button type="button" class="btn btn-primary" id="resume-refuse">拒绝</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="companyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 800px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">招聘信息</h4>
+            </div>
+            <div class="modal-body" style="height: 380px">
+                <div id="getid">
+
+                </div>
+                <div class="form-group" class="first-modal-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Cname" class="col-sm-3 control-label">企业名</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Cname" placeholder="请输入企业名" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Ctype" class="col-sm-3 control-label">企业类型</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Ctype" placeholder="请输入企业类型" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Cposition" class="col-sm-3 control-label">招聘职位</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Cposition" placeholder="请输入招聘职位">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Caddress" class="col-sm-3 control-label">单位地址</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Caddress" placeholder="请输入单位地址">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Ctell" class="col-sm-3 control-label">联系电话</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="Ctell" placeholder="请输入联系电话">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <label for="Cproject">招聘信息</label>
+                            <textarea class="form-control" rows="6" id="Cproject"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="company-change">提交更改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="head">
+    <div class="content-div" id="head-div">
+        <div id="img-div">
+            <a href="index.html" id="img-a"><img src="img/logo.png" height="60px"/></a>
+        </div>
+        <a class="head-role1 head-active">用户信息</a>
+        <a class="head-role1" href="jobmessage.html">发布招聘</a>
+        <a class="head-role1" href="messageCheck.html">企业信息审核</a>
+    </div>
+</div>
+<div class="content-div">
+    <hr>
+    <div id="body">
+        <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+            <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab" id="chang-message">基本信息</a></li>
+            <li><a href="#tab-firefox" role="tab" data-toggle="tab" id="chang-photo">头像设置</a></li>
+            <li><a href="#tab-safari" role="tab" data-toggle="tab" id="show-message">我的信息</a></li>
+            <li><a href="#tab-opera" role="tab" data-toggle="tab" id="chang-resume">我的发布</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-chrome">
+                <div id="user-imformation">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label">登陆名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="username" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-sm-2 control-label">登陆密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="password" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">邮箱</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="col-sm-2 control-label">创建日期</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="date" placeholder="" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-4 button-save">
+                                <button class="btn btn-default" id="message-save">保存信息</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="alert alert-success alert-dismissable" id="message-alert">
+                                    <button type="button" class="close" data-dismiss="alert"
+                                            aria-hidden="true">
+                                        &times;
+                                    </button>
+                                    保存成功
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab-firefox">
+                <div class="row feature">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+
+                        <div class="form-group">
+                            <div class=" col-sm-offset-4 col-md-4">
+                                <img src="img/aaa.jpg" class="img-circle" width="200px" height="200px" id="img-change">
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-4 button-save">
+                                <button class="btn btn-default" id="img-button">保存图片</button>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="alert alert-success alert-dismissable" id="img-alert">
+                                    <button type="button" class="close" data-dismiss="alert"
+                                            aria-hidden="true">
+                                        &times;
+                                    </button>
+                                    保存成功
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab-safari">
+                <hr>
+                <div class="form-group" id="resume-table-div">
+                    <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="resume-table">
+                        <thead>
+                             <tr>
+                                <th>编号</th>
+                                <th>招聘职位</th>
+                                <th>投递人</th>
+                                 <th>投递时间</th>
+                                 <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab-opera">
+                <div class="row" id="resume-div">
+                    <div class="form-group">
+                        <div class="col-md-2">
+
+                        </div>
+                        <div class="col-md-8">
+                            <hr>
+                            <div id="table-no-alert">
+                                你还没有简历
+                            </div>
+                            <div id="table-div">
+                                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="table">
+                                    <thead>
+                                    <tr>
+                                        <th>招聘id</th>
+                                        <th>招聘职位</th>
+                                        <th>发布时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/ajaxfileupload.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="js/usermodel.js"></script>
+<script src="js/company.js"></script>
+</body>
+</html>

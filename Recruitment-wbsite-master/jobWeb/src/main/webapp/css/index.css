@@ -1,0 +1,368 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar{
+    border-width: 0px;
+    margin-bottom: 0px;
+}
+
+.container-fluid{
+    background-color: #F8F8F8;
+
+}
+.navbar-right>li{
+    float: right;
+}
+#head-parent{
+    width: 100%;
+    background-color: #F8F8F8;
+    border-bottom: solid 1px 	#F0F0F0;
+}
+#head{
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel-body
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    padding: 0px;
+}
+#main,#mb-menu,#login,#islogin{
+    float: left;
+    margin-right: 10px;
+}
+#mb-menu{
+    margin-right: 20px;
+    width: 80px;
+    padding-left: 15px;
+    display: none;
+}
+.gap{
+    padding-left: 10px;
+}
+#head-search
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+
+}
+#head-search-img
+{
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+#head-search-t
+{
+    float: left;
+    position: relative;
+    margin-top: 50px;
+    height: 40px;
+    border: 2px solid #3385ff;
+    border-radius: 4px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+#selectjob-txt
+{
+    display: block;
+    padding: 8px 110px 8px 10px;
+    overflow: hidden;
+}
+#selectjob-ts
+{
+    width: 100%;
+    height: 18px;
+    line-height: 18px !important;
+    font-size: 12px;
+    border: 0;
+    outline: 0;
+}
+#search-submit
+{
+    position:absolute;
+    width: 95px;
+    height: 39px;
+    right:0;
+    top:-2px;
+    font-size:20px ;
+    background: #3385ff;
+    border: 0;
+    color: #fff;
+}
+#head-search-txt
+{
+    width: 550px;
+    position: relative;
+}
+#head-img{
+    width: 1100px;
+    height:200px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-loop{
+    width: 5500px;
+    height: 200px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.img-loop img
+{
+    float: left;
+    width: 1100px;
+    height: 200px;
+}
+#alljob,.hotjob-it,.hotjob-cal,.hotjob-bir
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 1100px;
+    box-shadow: 0px 0px 5px #888888;
+    -webkit-box-shadow: 0px 0px 5px #888888;
+    -ms-box-shadow: 0px 0px 5px #888888;
+    -moz-box-shadow: 0px 0px 5px #888888;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.title
+{
+    border-bottom: 1px solid #3385ff;
+    height: 36px;
+    line-height: 36px;
+    background: #3385ff;
+    padding-left: 19px;
+    margin-top: -20px;
+    position: relative;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+.alljob-txt
+{
+    padding: 13px 20px;
+    margin-top: -1px;
+    border: 1px solid #3385ff;
+}
+#alljob-1,#alljob-2,#alljob-3
+{
+    padding-bottom: 13px;
+    margin-bottom: 13px;
+    margin-left: 50px;
+
+}
+.alljob-txt a
+{
+    color: #15c;
+    font-size: large;
+}
+.alljob-txt a:hover{
+    color: red;
+}
+.alljob-txt li
+{
+    float: left;
+    width: 250px;
+}
+.alljob-txt a
+{
+    text-decoration: none;
+}
+ul
+{
+    list-style: none;
+}
+.more
+{
+    float: right;
+    height: 16px;
+    line-height: 16px;
+    background: #3385ff;
+    margin-top:-25px;
+    position: relative;
+    margin-right: 10px;
+}
+.more a
+{
+    color: #f7f7f7;
+    text-decoration: none;
+}
+#head-top{
+    width: 100%;
+    background: #f5f5f5;
+    border-bottom:1px solid #d9dbde;
+}
+
+a{
+    cursor: pointer;
+}
+.hotjob{
+    margin-top: -1px;
+    border: 1px solid #3385ff;
+    height: 202px;
+
+}
+.navbar-header{
+    margin-left: 20px;
+}
+.hotjob ul {
+    list-style-type: none;
+}
+.hotjob div{
+    float: left;
+}
+.job{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: solid 1px #edeef0;
+    background-color: white;
+    cursor: pointer;
+    font-family: 宋体;
+}
+.job:hover{
+    background-color: #F8F8F8;
+}
+.job-title{
+    width: 250px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: 仿宋;
+    font-weight: 600;
+    color: #F50;
+}
+.job-company{
+    width: 250px;
+}
+.job-address{
+    width: 350px;
+}
+
+
+#foot{
+    margin-top: 30px;
+}
+#foot-ul{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    border-bottom: solid 1px #B0B0B0;
+}
+#foot-ul li{
+    display: block;
+    float: left;
+    width: 250px;
+}
+#foot-ul img:first-child{
+    margin-left: 13px;
+}
+#foot-ul img{
+    float: left;
+    margin-right: 3px;
+}
+#foot-div{
+    margin-top: 10px;
+    padding-top: 20px;
+    text-align: center;
+    color: #afaeae;
+    padding-bottom: 10px;
+}
+#foot-div a{
+    color: #afaeae;
+    text-decoration: none;
+}
+#nav-login{
+    display: none;
+}
+
+
+
+/*search*/
+#no-search{
+
+}
+#search{
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px #3385ff;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px #888888;
+    -webkit-box-shadow: 0px 0px 10px #888888;
+    -ms-box-shadow: 0px 0px 10px #888888;
+    -moz-box-shadow: 0px 0px 10px #888888;
+    display: none;
+}
+#search-head{
+    height: 36px;
+    line-height: 36px;
+    background: #3385ff;
+    padding-left: 19px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+.search-body{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: solid 1px #edeef0;
+    background-color: white;
+    cursor: pointer;
+    font-family: 宋体;
+}
+.search-body:hover{
+    background-color: 	#F0F0F0;
+}
+.search-body div{
+    float: left;
+}
+.search-title{
+    width: 300px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: 仿宋;
+    font-weight: 600;
+    color: #F50;
+}
+.search-company {
+    width: 300px;
+}
+
+.search-address{
+    width: 300px;
+}
+
+.tuchu:hover{
+    transform:translate3d(-3px,-4px,0);
+    -moz-transform: translate3d(-3px,-4px,0);
+    -webkit-transform: translate3d(-3px,-4px,0);
+    -ms-transform: translate3d(-3px,-4px,0);
+
+    box-shadow: 0px 4px 5px #888888;
+    -moz-box-shadow: 0px 4px 5px #888888;
+    -ms-box-shadow: 0px 4px 5px #888888;
+    -webkit-box-shadow: 0px 4px 5px #888888;
+}
+.more{
+    color: white;
+}
+.more:hover{
+    cursor: pointer;
+}
+@media all and (max-width: 1100px){
+    #head-parent{
+        width: 1100px;
+    }
+}

@@ -1,0 +1,144 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#img-div{
+    float: left;
+    margin-top: 10px;
+}
+#head{
+    width: 100%;
+    height: 100px;
+    background-color: #e96c1f;
+}
+#head-div{
+    height: 100%;
+    background-color: #e96c1f;
+}
+.content-div{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.head-role1{
+    float: left;
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 23px;
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: 10px;
+    font-family: 宋体;
+}
+.head-active{
+    font-weight: bold;
+}
+.head-role1:hover{
+    text-decoration: none;
+    color: white;
+    border-bottom: solid 2px #3385ff;
+}
+#user-imformation{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.button-save{
+    margin-top: 20px;
+}
+.button-save button{
+    width: 180px;
+    margin-left: 10px;
+}
+#img-change{
+    cursor: pointer;
+    margin-top: 30px;
+}
+.alert-div{
+    margin-top: 30px;
+}
+#no-alert{
+    width: 80px;
+    font-size: 20px;
+    color: #E8E8E8;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+#resume-table td{
+    line-height:35px;
+}
+#resume-div{
+    margin-top: 20px;
+}
+#body{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#message-alert{
+    margin-top: 22px;
+    width: 130px;
+    padding: 3px;
+    padding-right: 30px;
+    display: none;
+}
+#img-alert{
+    margin-top: 22px;
+    width: 130px;
+    padding: 3px;
+    padding-right: 30px;
+    display: none;
+}
+#file{
+    display: none;
+}
+#table-no-alert{
+    width: 150px;
+    font-size: 20px;
+    color: #E8E8E8;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+#table-div{
+    display: none;
+}
+.control-label{
+    padding-left: 0px;
+}
+#myModal .form-group{
+    margin-top: 15px;
+}
+#companyModal .form-group{
+    margin-top: 15px;
+}
+#first-modal-group{
+    margin-top: -10px;
+}
+.modal-body{
+    padding-top: 0px;
+}
+#getid{
+    display: none;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+table.dataTable thead th, table.dataTable thead td{
+    border-width: 0px;
+}
+table.dataTable.no-footer{
+    border-width: 0px;
+}
+#resume-table-div,#jobtable-div{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

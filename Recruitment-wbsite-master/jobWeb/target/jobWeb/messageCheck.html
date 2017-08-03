@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/messageCheck.css">
+</head>
+<body>
+<div id="head">
+    <div class="content-div" id="head-div">
+        <div id="img-div">
+            <a href="index.html" id="img-a"><img src="img/logo.png" height="60px"/></a>
+        </div>
+        <a class="head-role1" href="company.html">用户信息</a>
+        <a class="head-role1" href="jobmessage.html">发布招聘</a>
+        <a class="head-role1 head-active">企业信息审核</a>
+    </div>
+</div>
+<div id="body" onload="checkIsLogin()">
+    <hr>
+    <div class="check-body" id="check-start">
+        <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-success" role="progressbar"
+                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                 style="width: 0%;">
+                <span class="sr-only">0% 完成</span>
+            </div>
+        </div>
+        <label id="start-label">
+            点我，开始您企业信息的审核吧
+        </label>
+        <img src="img/check.jpg" class="check-img" id="check1">
+    </div>
+    <div class="check-body" id="check-write">
+        <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-success" role="progressbar"
+                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                 style="width: 33%;">
+                <span class="sr-only">33% 完成</span>
+            </div>
+        </div>
+        <div id="check-write-message">
+            <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">企业名称</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="name" placeholder="请输入企业名称">
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            <div class="form-group">
+                <label for="number" class="col-sm-3 control-label">企业编号</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="number" placeholder="请输入企业编号">
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">企业邮件</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="email" placeholder="请输入企业邮件">
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            <div class="form-group">
+                <label for="legalname" class="col-sm-3 control-label">法人姓名</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="legalname" placeholder="请输入法人姓名">
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            <div class="form-group">
+                <label for="legalnumber" class="col-sm-3 control-label">法人身份证</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="legalnumber" placeholder="请输入法人身份证">
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            <div class="form-group">
+                <label for="type" class="col-sm-3 control-label">企业类型</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="type" placeholder="请输入企业类型">
+                </div>
+            </div>
+            <div class="col-sm-offset-2 col-sm-4 button-save">
+                <button class="btn btn-default" id="check2">提交企业信息</button>
+            </div>
+        </div>
+    </div>
+    <div class="check-body" id="check-wait">
+        <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-success" role="progressbar"
+                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                 style="width: 66%;">
+                <span class="sr-only">66% 完成</span>
+            </div>
+        </div>
+        <label id="wait-label">
+            还在审核中，请安心等待
+        </label>
+        <img src="img/check.jpg" class="check-img">
+    </div>
+    <div class="check-body" id="check-success">
+        <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-success" role="progressbar"
+                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                 style="width: 100%;">
+                <span class="sr-only">66% 完成</span>
+            </div>
+        </div>
+        <label id="success-label">
+            审核已成功，点我去招聘吧
+        </label>
+        <img src="img/check-success.png" class="check-img" id="check3">
+    </div>
+    <div class="check-body" id="check-fail">
+        <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-success" role="progressbar"
+                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                 style="width: 100%;">
+                <span class="sr-only">66% 完成</span>
+            </div>
+        </div>
+        <label id="fail-label">
+            审核失败,点我去再次申请
+        </label>
+        <img src="img/check-fail.jpg" class="check-img" id="check4">
+    </div>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="js/messageCheck.js"></script>
+</body>
+</html>

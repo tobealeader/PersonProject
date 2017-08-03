@@ -1,0 +1,283 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+hr{
+    margin-bottom: 0px;
+}
+
+#head1{
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#head-img
+{
+    float: left;
+}
+#head-root
+{
+    float: left;
+    margin-left: 30px;
+    margin-top: 35px;
+    font-size: 13px;
+}
+#head-root a
+{
+    color: black;
+}
+#head-root a:hover
+{
+    color: red;
+}
+a
+{
+   text-decoration: none;
+}
+#head-opnews
+{
+    float: right;
+    margin-right: 0px;
+    margin-top: 20px;
+}
+#head-opnews button
+{
+    border: blue solid 10px ;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    background: blue;
+    color: white;
+    width: 100px;
+}
+#center-img
+{
+    margin-top: -25px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#center-hr
+{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+}
+#body
+{
+    width: 1096px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #EAEAEA;
+    margin-top: -2px;
+    box-shadow: 0px 0px 10px #888888;
+    -webkit-box-shadow: 0px 0px 10px #888888;
+    -ms-box-shadow: 0px 0px 10px #888888;
+    -moz-box-shadow: 0px 0px 10px #888888;
+}
+#job-name
+{
+    font-size: 22px;
+    color: #0f0f0f;
+    font-family: 微软雅黑;
+    background: #EAEAEA;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+#job-datetime
+{
+    background: #EAEAEA;
+    height: 40px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+#job-datetime li
+{
+    float: left;
+    width: 150px;
+    font-size: 12px;
+    color:#757575;
+    list-style-type: none;
+}
+.work
+{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#work-name
+{
+    float: left;
+    font-family: 黑体;
+    margin-top: 20px;
+    width: 200px;
+}
+#work-name a
+{
+    font-size: large;
+}
+#work-name a:hover
+{
+    color: red;
+}
+#work-salary
+{
+    float: left;
+    font-family: 黑体;
+    margin-top: 20px;
+    width: 700px;
+    color: red;
+    font-size: large;
+}
+#work-personnum
+{
+    float: left;
+    font-family: 黑体;
+    margin-top: 20px;
+    width: 200px;
+    margin-left: 0px;
+}
+#worktime
+{
+    float: left;
+    margin-left: 150px;
+    font-family: 黑体;
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+}
+#company-name
+{
+    margin-top: 20px;
+    font-size: 15px;
+    width: 500px;
+    font-family: 黑体;
+}
+#resure
+{
+    color: #2E8B57;
+
+}
+#work-address,#work-tel
+{
+    margin-top: 20px;
+    font-family: 黑体;
+}
+#work-tel
+{
+    color: red;
+    font-size: large;
+}
+.name
+{
+    color:#7F7F7F;
+    font-family: 黑体;
+    font-size: 15px;
+}
+#work-describe
+{
+    margin-top: 20px;
+    width: 600px;
+}
+#work-submit
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#work-submit button
+{
+    border: blue solid 10px ;
+    font-size: 20px;
+    font-family: 微软雅黑;
+    background: blue;
+    color: white;
+    width: 200px;
+}
+#foot-div{
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    color: #afaeae;
+    padding-bottom: 10px;
+}
+#foot-div p
+{
+    font-size: 15px;
+    font-family: 黑体;
+}
+#foot-hr
+{
+    margin-top: 5px;
+}
+
+#foot-div a{
+    color: #afaeae;
+    text-decoration: none;
+}
+.footer
+{
+    margin-top: 20px;
+}
+#address{
+    font-weight: 300;
+    color: #B8B8B8;
+}
+#tell{
+    font-weight: 300;
+}
+#head-root a:hover{
+    color: black;
+    text-decoration: none;
+}
+#nav-login{
+    display: none;
+}
+.navbar{
+    border-width: 0px;
+    margin-bottom: 0px;
+}
+
+.container-fluid{
+    background-color: #F8F8F8;
+
+}
+.navbar-right>li{
+    float: right;
+}
+#head-parent{
+    width: 100%;
+    background-color: #F8F8F8;
+    border-bottom: solid 1px 	#F0F0F0;
+}
+#head{
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#nav-login a:hover{
+    cursor: pointer;
+}
+.modal-content{
+    width: 400px;
+}
+.modal-content label{
+    margin-right: 20px;
+}
+#modal .form-group label:first-child{
+    color: #E0E0E0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

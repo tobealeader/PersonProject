@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height ,user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1 ">
+    <title>简历创建</title>
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body onload="checkIsLogin()">
+    <div id="head">
+        <div class="content-div" id="head-div">
+            <div id="img-div">
+                <a href="index.html" id="img-a"><img src="img/logo.png" height="60px"/></a>
+            </div>
+            <a class="head-role1" href="person.html">用户信息</a>
+            <a class="head-role1 head-active">新建简历</a>
+        </div>
+    </div>
+    <div id="body-parent">
+        <div id="body">
+            <div class="information">
+                <div class="information-head1">
+                    <div class="information-head-i">
+                        <i class="fa fa-list-alt" aria-hidden="true" style="color:gray;"></i>
+                    </div>
+                    <div class="information-head-span">
+                        基本信息
+                    </div>
+                    <div class="information-head-div"></div>
+                </div>
+                <div class="information-body">
+                    <div>
+                        <span>职位</span>
+                        <input type="text" id="position" name="position" class="input" style="margin-right: 5px">
+                        <span id="position-check"></span>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>姓名</span>
+                        <input type="text" id="username" name="username" class="input">
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>性别</span>
+                        <div id="boy" class="sex-selected"><i class="fa fa-mars" aria-hidden="true"></i> 男</div>
+                        <div id="girl"><i class="fa fa-venus" aria-hidden="true"></i> 女</div>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>出生年份</span>
+                        <div id="birth-hover">
+                            <input type="text" id="birth" name="birth" class="input" readonly="readonly">
+                            <div style="clear: both"></div>
+                            <div class="select-list" id="birth-list">
+                                <ul id="birth-ul">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>手机号码</span>
+                        <input type="text" id="tell" name="tell" class="input" style="margin-right: 5px">
+                        <span id="tell-check"></span>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>电子邮件</span>
+                        <input type="text" id="email" name="email" class="input" style="margin-right: 5px">
+                        <span id="email-check"></span>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>家庭住址</span>
+                        <input type="text" id="address" name="address" class="input">
+                    </div>
+                </div>
+                <div class="information-head">
+                    <div class="information-head-i">
+                        <i class="fa fa-table" aria-hidden="true" style="color:gray;"></i>
+                    </div>
+                    <div class="information-head-span">
+                        求职信息
+                    </div>
+                    <div class="information-head-div"></div>
+                </div>
+                <div class="information-body">
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>专业</span>
+                        <input type="text" id="major" name="major" class="input">
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>学历</span>
+                        <div id="eduction-hover">
+                            <input type="text" id="education" name="education" class="input"  readonly="readonly">
+                            <div style="clear: both"></div>
+                            <div class="select-list" id="education-list">
+                                <ul>
+                                    <li>高中以下</li>
+                                    <li>高中</li>
+                                    <li>中专/技校</li>
+                                    <li>大专</li>
+                                    <li>本科</li>
+                                    <li>硕士</li>
+                                    <li>博士</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>英语水平</span>
+                        <div id="english-hover">
+                            <input type="text" id="english" name="english" class="input" readonly="readonly">
+                            <div style="clear: both"></div>
+                            <div class="select-list" id="engish-list">
+                                <ul id="english-ul">
+                                    <li>英语四级以下</li>
+                                    <li>英语四级</li>
+                                    <li>英语六级</li>
+                                    <li>英语八级</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>毕业院校</span>
+                        <input type="text" id="university" name="university" class="input">
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="margin-top: 20px;">
+                        <span>工作经历</span>
+                        <textarea  id="project" name="project" class="input"></textarea>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+                <button>保存简历</button><div id="check"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/resume.js"></script>
+</body>
+</html>

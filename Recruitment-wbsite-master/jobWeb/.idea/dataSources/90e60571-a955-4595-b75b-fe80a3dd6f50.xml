@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - job@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="job">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="bike"/>
+    <schema id="3" name="boke"/>
+    <schema id="4" name="djtime"/>
+    <schema id="5" name="information_schema"/>
+    <schema id="6" name="performance_schema"/>
+    <schema id="7" name="shiwu"/>
+    <schema id="8" name="test"/>
+    <schema id="9" name="wordpress"/>
+    <table id="10" parent="1" name="tb_applicant"/>
+    <table id="11" parent="1" name="tb_company">
+      <comment>只有企业信息全部填写完整后，该企业才可以进行招聘活动。</comment>
+    </table>
+    <table id="12" parent="1" name="tb_info"/>
+    <table id="13" parent="1" name="tb_member">
+      <comment>包括管理员、企业管理者、求职用户三种类型</comment>
+    </table>
+    <table id="14" parent="1" name="tb_recruitment"/>
+    <column id="15" parent="10" name="ApplicantID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="16" parent="10" name="MemberID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="17" parent="10" name="ApplicantName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="18" parent="10" name="ApplicantSex">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="19" parent="10" name="ApplicantNation">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="20" parent="10" name="HomePlace">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="21" parent="10" name="UserBirthday">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="22" parent="10" name="ApplicantPolitics">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="23" parent="10" name="ApplicantSchool">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="24" parent="10" name="ApplicantEducation">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="25" parent="10" name="ApplicantMajor">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="26" parent="10" name="ApplicantEnglish">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="27" parent="10" name="ApplicantPhone">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="28" parent="10" name="ApplicantEmail">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="29" parent="10" name="ApplicantQQ">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="30" parent="10" name="ApplicantAddress">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="31" parent="10" name="ApplicantStudy">
+      <data-type>varchar(1024)|0</data-type>
+    </column>
+    <column id="32" parent="10" name="ApplicantProject">
+      <data-type>varchar(1024)|0</data-type>
+    </column>
+    <column id="33" parent="10" name="ApplicantHonor">
+      <data-type>varchar(1024)|0</data-type>
+    </column>
+    <column id="34" parent="10" name="ApplicantHobby">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <index id="35" parent="10" name="FK_求职者">
+      <columns>MemberID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <column id="36" parent="11" name="CompanyID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="37" parent="11" name="MemberID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="38" parent="11" name="CompanyCode">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="39" parent="11" name="CompanyName">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="40" parent="11" name="CompanyPhone">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="41" parent="11" name="CompanyEmail">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="42" parent="11" name="CompanyAdmin">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="43" parent="11" name="AdminCard">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="44" parent="11" name="CompanyImage">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="45" parent="11" name="CompanyStatus">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="46" parent="11" name="FK_企业用户">
+      <columns>MemberID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <column id="47" parent="12" name="InfoID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="48" parent="12" name="ApplicantID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="49" parent="12" name="RecruitmentID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="50" parent="12" name="ApplyTime">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="51" parent="12" name="ApplyStatus">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="52" parent="12" name="FK_tb_info">
+      <columns>RecruitmentID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <column id="53" parent="13" name="MemberID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="54" parent="13" name="LoginName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="55" parent="13" name="LoginPwd">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="56" parent="13" name="MemberEmail">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="57" parent="13" name="MemberType">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="58" parent="13" name="RegisterTime">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="59" parent="14" name="RecruitmentID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="60" parent="14" name="CompanyID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="61" parent="14" name="RecruitmentPosition">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="62" parent="14" name="RecruitmentInfo">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="63" parent="14" name="RecruitmentStatus">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="64" parent="14" name="FK_recruitment">
+      <columns>CompanyID</columns>
+      <desc-columns></desc-columns>
+    </index>
+  </database-model>
+</dataSource>

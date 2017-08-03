@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height ,user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1 ">
+    <title>发布招聘</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jobmessage.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body onload="checkIsLogin()">
+<div id="head">
+    <div class="content-div" id="head-div">
+        <div id="img-div">
+            <a href="index.html" id="img-a"><img src="img/logo.png" height="60px"/></a>
+        </div>
+        <a class="head-role1" href="company.html">用户信息</a>
+        <a class="head-role1 head-active">发布招聘</a>
+        <a class="head-role1" href="messageCheck.html">企业信息审核</a>
+    </div>
+</div>
+<div id="body">
+    <div class="information-head1">
+        <div class="information-head-i">
+            <i class="fa fa-list-alt" aria-hidden="true" style="color:gray;"></i>
+        </div>
+        <div class="information-head-span">
+            招聘信息
+        </div>
+        <div class="information-head-div"></div>
+    </div>
+    <div style="clear: both"></div>
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="position" class="col-sm-3 control-label">招聘职位</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="position" placeholder="请输入招聘职位">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="position" class="col-sm-3 control-label">招聘职位</label>
+            <div id="type">
+                <div class="radio">
+                    <label class="type-tabel">
+                        <input type="radio" value="IT/互联网" name="radio">IT/互联网
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" value="服务员" name="radio">服务员
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" value="销售" name="radio">销售
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" value="顾问" name="radio">顾问
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" value="策划" name="radio">策划
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" value="翻译" name="radio">翻译
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tell" class="col-sm-3 control-label">联系电话</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="tell" placeholder="请输入联系电话">
+            </div>
+            <div class="col-sm-3" id="alert1">
+                <div class="alert alert-success">请输入正确联系电话</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="address" class="col-sm-3 control-label">单位地址</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="address" placeholder="请输入单位地址">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="duty" class="col-sm-3 control-label">招聘信息</label>
+            <div class="col-sm-7">
+                <textarea class="form-control" rows="6" id="duty" placeholder="请输入招聘信息"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-5">
+                <button>发布招聘</button><div id="check"></div>
+            </div>
+            <div class="col-sm-3" id="alert2">
+                <div class="alert alert-success"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jobmessage.js"></script>
+</body>
+</html>

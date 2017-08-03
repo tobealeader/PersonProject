@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="datatable/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="datatable/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="datatable/DT_bootstrap.css">-->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+</head>
+<body>
+<button>打印</button>
+<div style="width: 1000px;margin-left: auto;margin-right: auto;">
+    <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="table">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>账号</th>
+            <th>密码</th>
+            <th>注册时间</th>
+            <th>邮箱</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<!--<script src="datatable/dataTables.bootstrap.js"></script>
+<script src="datatable/dataTables.tableTools.js"></script>
+<script src="datatable/DT_bootstrap.js"></script>
+<script src="datatable/jquery.dataTables.min.js"></script>-->
+<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="datatable/usertable.js"></script>
+<script>
+    var json = [{
+        "productName":"衬衫",
+        "color":"红色",
+        "chima":"小",
+        "price":10.00,
+        "quantity":1,
+        "totalPrice":10.00,
+		"productId":1
+    },{
+        "productName":"短袖",
+        "color":"蓝色",
+        "chima":"中",
+        "price":15.00,
+        "quantity":2,
+        "totalPrice":30.00,
+		"productId":2
+    }];
+   $("button").click(function () {
+       $.ajax({
+           url:"http://localhost:20000/",
+           dataType:"json",
+
+           type:'post',
+           data:{
+               "printhead":"一号楼",
+               "orderSn":"2",
+               "date":"2016-11-30",
+               "clientName":"东楗",
+               "salesman":"门店总经理",
+               "totalQuantity":3,
+               "shouldPay":"40",
+               "phone":"10086",
+               "mobile":"17858936127",
+               "address":"浙江大学宁波理工学院",
+               "memo":"欢迎下次再来消费",
+               "oper":"嗣华兄",
+               "version":"3.0.0",
+			   "realPay":"11",
+			   "lastDebt":"12",
+			   "allDebt":"13",
+			   "nonBank":"nonBank",
+			   "jianBank":"jianBank",
+			   "jiaoBank":"jiaoBank",
+			   "xinBank":"xinBank",
+			   "printDate":"23:09",
+               "orderItems":JSON.stringify(json)
+           },
+           success:function (e) {
+
+           },
+           error:function (e) {
+               alert("cuo");
+           }
+       })
+   })
+
+</script>
+</body>
+</html>

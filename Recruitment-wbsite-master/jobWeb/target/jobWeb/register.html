@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height ,user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1 ">
+    <title>用户注册</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-image: url("/img/background.jpg");
+            background-size: cover;
+
+        }
+        #head{
+            height: 80px;
+            margin-top: 30px;
+            padding-bottom: 20px;
+            width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: solid 1px #E8E8E8;
+        }
+        #head img{
+            float: left;
+            margin-top: 15px;
+            margin-left: 100px;
+        }
+        #head div{
+            float: right;
+            margin-right: 100px;
+            margin-top: 35px;
+        }
+        #head button{
+            height: 35px;
+            width: 70px;
+            font-size: 15px;
+            background-color: #4490f7;
+            outline: hidden;
+            border-width: 0px;
+            border-radius: 5px;
+            font-weight: 700;
+            color: white;
+        }
+        #head button:hover{
+            color: white;
+            background: #0066FF;
+        }
+        #head i{
+            margin-right: 10px;
+            color: #fff;
+            font-style: normal;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        #body{
+            width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+        #body input{
+            height: 35px;
+            line-height: 35px;
+            width: 260px;
+            font-size: 14px;
+            margin-top: 20px;
+            color: #D0D0D0;
+            padding-left: 10px;
+            border: solid 1px #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        #body-submit{
+            height: 40px;
+            width: 260px;
+            font-size: 20px;
+            color: white;
+            background-color: #4490f7;
+            border-width: 0px;
+            margin-top: 20px;
+            margin-left: 100px;
+            border-radius: 4px;
+        }
+        #body-submit:hover{
+            color: white;
+            background: #0066FF;
+        }
+        #body i{
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            color: #333;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        button{
+            cursor: pointer;
+        }
+        #checkbox{
+
+            margin-right: 2px;
+            margin-top: -15px;
+            width: 147px;
+            height: 16px;
+            border: solid 1px #E0E0E0;
+            border-radius: 7px;
+            float: right;
+        }
+        .check{
+            height: 10px;
+            width: 40px;
+            float: left;
+            background-color: #F0F0F0;
+            margin-left: 6px;
+            margin-top: 3px;
+            margin-bottom: 2px;
+
+            border-radius: 5px;
+        }
+        #body-radio{
+            line-height: 40px;
+            height: 40px;
+            padding-left: 30px;
+        }
+        #body-radio input{
+            height: 20px;
+            width: 20px;
+            padding-top: 10px;
+            margin-left: 85px;
+        }
+        #body-radio i{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .body-radio1{
+            float: left;
+
+        }
+        .prompt{
+            margin-left: 10px;
+            color: red;
+        }
+        input{
+            border-radius: 3px;
+        }
+        #body-radio input{
+            cursor: pointer;
+        }
+        @media all and (max-width: 767px) {
+            #head{
+                max-width: 767px;
+            }
+            #body-parent{
+                width: 676px;
+            }
+        }
+    </style>
+    <script>
+        function removeValue(e) {
+            $(e).prop("value","");
+            $(e).css("color","black");
+            if($(e).prop("id")=="password"){
+                $(e).prop("type","password");
+                $("#span-pass").html("");
+                $("#checkbox").css("display","block");
+            }
+            else if($(e).prop("id")=="repassword") {
+                $(e).prop("type", "password");
+            }
+        }
+        function addValue(e) {
+
+            if($(e).val()==""){
+
+                if($(e).prop("id")=="username"){
+                    $(e).css("color","#E8E8E8");
+                    $(e).prop("value","请输入用户名");
+                }
+                else if($(e).prop("id")=="email"){
+                    $(e).css("color","#E8E8E8");
+                    $(e).prop("value","请输入邮箱");
+                }
+                else if($(e).prop("id")=="password"){
+                    $(e).css("color","#E8E8E8");
+                    $(e).prop("type","txt");
+                    $(e).prop("value","请输入密码");
+
+                }
+                else if($(e).prop("id")=="repassword"){
+                    $(e).css("color","#E8E8E8");
+                    $(e).prop("type","txt");
+                    $(e).prop("value","请重新输入密码");
+                }
+            }
+            else{
+                if($(e).prop("id")=="username"){
+                    $("#span-name").html("");
+                }
+                else if($(e).prop("id")=="email"){
+                    $("#span-email").html("");
+                }
+                else if($(e).prop("id")=="repassword"){
+                    $("#span-repass").html("");
+                }
+            }
+        }
+        function register() {
+            if($("#password").val()=="请输入密码"||$("#repassword").val()=="请再次输入密码"||$("#username").val()=="请输入用户名"){
+                alert("请填写完整信息");
+                return;
+            }
+            if($("#password").val()==$("#repassword").val()){
+                alert("注册成功");
+            }
+            else{
+                alert("密码不一致");
+            }
+        }
+        function radioclick() {
+            $("#span-type").html("");
+        }
+        $(function () {
+            $('#password').bind('input propertychange', function() {
+                var str=$('#password').val()
+                var reg1=new RegExp("^[0-9]+$");
+                var reg2=new RegExp("^[a-zA-Z]+$");
+                var reg3=new RegExp("^[^0-9a-zA-Z]+$");
+                var reg4=new RegExp("^[^0-9]+$");
+                var reg5=new RegExp("^[^a-zA-Z]+$");
+                var reg6=new RegExp("^[0-9a-zA-Z]+$");
+                $("#check1").css("background-color","#F0F0F0");
+                $("#check2").css("background-color","#F0F0F0");
+                $("#check3").css("background-color","#F0F0F0");
+                if(str.length==0)
+                    return;
+                $("#check1").css("background-color","red");
+                if(!reg1.test(str)&&!reg2.test(str)&&!reg3.test(str)){
+                    if(reg4.test(str)||reg5.test(str)||reg6.test(str))
+                        $("#check2").css("background-color","red");
+                    else{
+                        $("#check2").css("background-color","red");
+                        $("#check3").css("background-color","red");
+                    }
+                }
+            });
+        })
+        function login() {
+            window.location.href="login.html";
+        }
+    </script>
+</head>
+<body>
+    <div id="head">
+        <a href="index.html"><img src="img/logo.png" height="60px"></a>
+        <div>
+            <i>我已注册，现在就</i><button onclick="login()">登陆</button>
+        </div>
+    </div>
+    <div id="body-parent">
+        <div id="body">
+
+            <div style="margin-left: 18px;">
+                <i> 用户名：</i><input type="text" value="请输入用户名" name="username" id="username" onclick="removeValue(this)" onblur="addValue(this)">
+                <span class="prompt" id="span-name"></span>
+            </div>
+            <div style="margin-left: 36px;">
+                <i>邮箱：</i><input type="text" value="请输入邮箱" name="email" id="email" onclick="removeValue(this)" onblur="addValue(this)">
+                <span class="prompt" id="span-email"> </span>
+            </div>
+            <div style="float: left;margin-left: 36px;">
+                <i>密码：</i><input type="text" value="请输入密码" name="password" id="password" onclick="removeValue(this)" onblur="addValue(this)">
+
+            </div>
+            <div style="float: left;margin-top: 27px">
+                <span class="prompt" id="span-pass"></span>
+            </div>
+            <div id="checkbox">
+                <div class="check" id="check1"></div><div class="check" id="check2"></div><div class="check" id="check3"></div>
+            </div>
+            <div style="clear: both"></div>
+            <div>
+                <i>确认密码：</i><input type="text" value="请重新输入密码" name="repassword" id="repassword" onclick="removeValue(this)" onblur="addValue(this)">
+                <span class="prompt" id="span-repass"></span>
+            </div>
+            <div id="body-radio">
+                <input type="radio" class="body-radio1" name="type" value="person" onclick="radioclick()"><i>个人</i>
+                <input type="radio" class="body-radio2" name="type" value="company" onclick="radioclick()"><i>公司</i>
+            </div>
+            <button id="body-submit">注册</button>
+            <span class="prompt" id="span-type"></span>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>
