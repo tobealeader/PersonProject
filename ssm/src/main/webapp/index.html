@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<button>test</button>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$("button").click(function () {
+		$.ajax({
+			url:"/book/list",
+			dataType:"json",
+			type:"post",
+			success:function (data) {
+				alert(data.length);
+			}
+		});
+	});
+</script>
+</body>
+</html>

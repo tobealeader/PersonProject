@@ -1,12 +1,16 @@
 package jsp.com.controller;
 
-import jsp.com.dao.ResumeDao;
 import jsp.com.dto.*;
 import jsp.com.entry.*;
-import jsp.com.service.*;
+import jsp.com.service.CompanyService;
+import jsp.com.service.JoblinkService;
+import jsp.com.service.ResumeService;
+import jsp.com.service.UserService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
