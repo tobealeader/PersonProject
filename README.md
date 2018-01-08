@@ -9,3 +9,4 @@
 * 俄罗斯方块小游戏, 具体看项目[Tetris](https://github.com/tobealeader/PersonProject/tree/master/Tetris)
 * 微信公众号，具体看项目[Weixin](https://github.com/tobealeader/PersonProject/tree/master/Weixin)
 * 一个reactDemo，具体看项目[react](https://github.com/tobealeader/PersonProject/tree/master/react)
+* ssm框架的demo，具体看项目[ssm](https://github.com/tobealeader/PersonProject/tree/master/ssm)
