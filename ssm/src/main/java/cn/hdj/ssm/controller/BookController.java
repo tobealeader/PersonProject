@@ -40,4 +40,9 @@ public class BookController {
 		return book;
 	}
 
+	@RequestMapping(value = "/testLogger")
+	public void testLogger() {
+		bookService.textLogger();
+	}
+
 }

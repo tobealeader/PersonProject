@@ -76,6 +76,12 @@
       <artifactId>logback-classic</artifactId>
       <version>1.1.1</version>
     </dependency>
+    <!-- logback对spring的支持,可以不配置,我添加是因为在web.xml加了个监听器 -->
+    <dependency>
+      <groupId>org.logback-extensions</groupId>
+      <artifactId>logback-ext-spring</artifactId>
+      <version>0.1.2</version>
+    </dependency>
 
     <!-- 添加json支持 -->
     <dependency>

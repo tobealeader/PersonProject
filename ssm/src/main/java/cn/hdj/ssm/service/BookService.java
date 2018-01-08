@@ -24,5 +24,9 @@ public interface BookService {
 	 */
 	List<Book> getList();
 
+	/**
+	 * textLogger
+	 */
+	public void textLogger();
 }
 
